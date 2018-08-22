@@ -181,7 +181,8 @@ static inline void Xdbl_Test()
 
     xdbl ten100 = Xdbl_FromDouble( 1e100 );
     xdbl ten100_ = ABC_CONST(0x014c924d692ca61b);
-
+    (void)ten100_;
+    (void)ten100;
     assert( ten100 == ten100_ );
 
 //    float f1 = Xdbl_ToDouble(c1);

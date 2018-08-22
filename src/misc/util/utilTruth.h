@@ -1259,6 +1259,7 @@ static inline int Abc_TtCheckCondDep2( word * pTruth, int nVars, int nSuppLim )
 static inline int Abc_TtCheckCondDep( word * pTruth, int nVars, int nSuppLim )
 {
     int nVarsMax = 13;
+    (void)nVarsMax;
     word Cof0[128], Cof1[128]; // pow( 2, nVarsMax-6 )
     int v, d, nWords = Abc_TtWordNum(nVars);
     assert( nVars <= nVarsMax );
