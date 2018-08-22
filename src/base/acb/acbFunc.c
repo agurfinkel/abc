@@ -231,7 +231,7 @@ void * Acb_VerilogSimpleParse( Vec_Int_t * vBuffer, Abc_Nam_t * pNames )
     Vec_IntPush( vTypes, -1 );
     Vec_IntPush( vTypes, Vec_IntSize(vFanins) );
     // create design
-    pDesign = Ndr_Create( Vec_IntEntry(vBuffer, 1) );
+    pDesign = (Ndr_Data_t*) Ndr_Create( Vec_IntEntry(vBuffer, 1) );
     ModuleID = Ndr_AddModule( pDesign, Vec_IntEntry(vBuffer, 1) );
     // create inputs
     Ndr_DataResize( pDesign, Vec_IntSize(vInputs) );
