@@ -1,3 +1,4 @@
+project(ABC)
 cmake_minimum_required(VERSION 3.3.0)
 
 include(CMakeParseArguments)
@@ -103,3 +104,6 @@ add_library(libabc-pic EXCLUDE_FROM_ALL ${ABC_SRC})
 abc_properties(libabc-pic PUBLIC)
 set_property(TARGET libabc-pic PROPERTY POSITION_INDEPENDENT_CODE ON)
 set_property(TARGET libabc-pic PROPERTY OUTPUT_NAME abc-pic)
+
+configure_file(cmake/PackageOptions.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/cmake/PackageOptions.cmake @ONLY)
